@@ -16,16 +16,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/queries'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/queries'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
     database_summary:
       get:
@@ -36,8 +36,8 @@ components:
         description: |
           Request various database content details
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
         responses:
           '200':
             description: OK
@@ -45,16 +45,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/database_summary'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/database_summary'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
     upstreams:
       get:
@@ -71,16 +71,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/upstreams'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/upstreams'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
     database_upstreams:
       get:
@@ -91,8 +91,8 @@ components:
         description: |
           Request upstream metrics (long-term database)
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
         responses:
           '200':
             description: OK
@@ -100,16 +100,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/upstreams'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/upstreams'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     recent_blocked:
       get:
         summary: Get most recently blocked domain
@@ -119,7 +119,7 @@ components:
         description: |
           Request most recently blocked domain
         parameters:
-          - $ref: 'stats.yaml#/components/parameters/recent_blocked/count'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/recent_blocked/count'
         responses:
           '200':
             description: OK
@@ -127,16 +127,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/recent_blocked'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/recent_blocked'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     top_domains:
       get:
         summary: Get top domains
@@ -146,8 +146,8 @@ components:
         description: |
           Request top domains
         parameters:
-          - $ref: 'stats.yaml#/components/parameters/top_items/blocked'
-          - $ref: 'stats.yaml#/components/parameters/top_items/count'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/blocked'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/count'
         responses:
           '200':
             description: OK
@@ -155,16 +155,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/top_domains'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/top_domains'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database_top_domains:
       get:
         summary: Get top domains (long-term database)
@@ -174,10 +174,10 @@ components:
         description: |
           Request top domains
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
-          - $ref: 'stats.yaml#/components/parameters/top_items/blocked'
-          - $ref: 'stats.yaml#/components/parameters/top_items/count'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/blocked'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/count'
         responses:
           '200':
             description: OK
@@ -185,16 +185,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/top_domains'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/top_domains'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     top_clients:
       get:
         summary: Get top clients
@@ -204,8 +204,8 @@ components:
         description: |
           Request top clients
         parameters:
-          - $ref: 'stats.yaml#/components/parameters/top_items/blocked'
-          - $ref: 'stats.yaml#/components/parameters/top_items/count'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/blocked'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/count'
         responses:
           '200':
             description: OK
@@ -213,16 +213,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/top_clients'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/top_clients'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database_top_clients:
       get:
         summary: Get top clients (long-term database)
@@ -232,10 +232,10 @@ components:
         description: |
           Request top clients
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
-          - $ref: 'stats.yaml#/components/parameters/top_items/blocked'
-          - $ref: 'stats.yaml#/components/parameters/top_items/count'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/blocked'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/parameters/top_items/count'
         responses:
           '200':
             description: OK
@@ -243,16 +243,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/top_clients'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/top_clients'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     query_types:
       get:
         summary: Get query types
@@ -268,16 +268,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/query_types'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/query_types'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database_query_types:
       get:
         summary: Get query types (long-term database)
@@ -287,8 +287,8 @@ components:
         description: |
           Request query types
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
         responses:
           '200':
             description: OK
@@ -296,16 +296,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'stats.yaml#/components/schemas/query_types'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/stats.yaml#/components/schemas/query_types'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
   schemas:
     queries:

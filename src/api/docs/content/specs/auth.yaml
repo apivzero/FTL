@@ -17,26 +17,26 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/session'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/session'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   auth_okay:
-                    $ref: 'auth.yaml#/components/examples/auth_okay'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/auth_okay'
                   no_login_required:
-                    $ref: 'auth.yaml#/components/examples/no_login_required'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/no_login_required'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/session'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/session'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   login_required:
-                    $ref: 'auth.yaml#/components/examples/login_required'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/login_required'
                   login_required_2fa:
-                    $ref: 'auth.yaml#/components/examples/login_required_2fa'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/login_required_2fa'
       post:
         summary: Submit password for login
         tags:
@@ -54,7 +54,7 @@ components:
           content:
             'application/json':
               schema:
-                $ref: 'auth.yaml#/components/schemas/password'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/password'
         responses:
           '200':
             description: OK
@@ -62,56 +62,56 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/session'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/session'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   login_okay:
-                    $ref: 'auth.yaml#/components/examples/login_okay'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/login_okay'
                   no_login_required:
-                    $ref: 'auth.yaml#/components/examples/no_login_required'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/no_login_required'
           '400':
             description: Bad Request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   no_payload:
-                    $ref: 'auth.yaml#/components/examples/errors/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/no_payload'
                   no_password:
-                    $ref: 'auth.yaml#/components/examples/errors/no_password'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/no_password'
                   password_inval:
-                    $ref: 'auth.yaml#/components/examples/errors/password_inval'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/password_inval'
                   totp_missing:
-                    $ref: 'auth.yaml#/components/examples/errors/totp_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/totp_missing'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   totp_invalid:
-                    $ref: 'auth.yaml#/components/examples/errors/totp_invalid'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/totp_invalid'
                   totp_reused:
-                    $ref: 'auth.yaml#/components/examples/errors/totp_reused'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/totp_reused'
           '429':
             description: Too Many Requests
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/too_many_requests'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/too_many_requests'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   rate_limit:
-                    $ref: 'auth.yaml#/components/examples/errors/rate_limit'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/rate_limit'
                   no_seats:
-                    $ref: 'auth.yaml#/components/examples/errors/no_seats'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/no_seats'
       delete:
         summary: Delete session
         tags:
@@ -138,15 +138,15 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     session_list:
       get:
         summary: List of all current sessions
@@ -161,16 +161,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/sessions_list'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/sessions_list'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     totp:
       get:
         summary: Suggest new TOTP credentials
@@ -185,21 +185,21 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/totp'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/totp'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     session:
       delete:
         summary: Delete session by ID
         parameters:
-          - $ref: 'auth.yaml#/components/parameters/id'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/parameters/id'
         tags:
           - Authentication
         operationId: "delete_auth_session"
@@ -213,30 +213,30 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad Request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   missing_session_id:
-                    $ref: 'auth.yaml#/components/examples/errors/missing_session_id'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/missing_session_id'
                   session_id_oob:
-                    $ref: 'auth.yaml#/components/examples/errors/no_password'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/no_password'
                   session_not_in_use:
-                    $ref: 'auth.yaml#/components/examples/errors/session_not_in_use'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/examples/errors/session_not_in_use'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     app:
       get:
         summary: Create new application password
@@ -255,16 +255,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'auth.yaml#/components/schemas/app'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/auth.yaml#/components/schemas/app'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
   schemas:
     session:

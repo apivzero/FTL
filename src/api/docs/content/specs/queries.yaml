@@ -125,16 +125,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'queries.yaml#/components/schemas/queries'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/queries.yaml#/components/schemas/queries'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
     suggestions:
       get:
@@ -151,16 +151,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'queries.yaml#/components/schemas/suggestions'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/queries.yaml#/components/schemas/suggestions'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
   schemas:
     queries:

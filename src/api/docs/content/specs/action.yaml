@@ -62,7 +62,7 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/errors/unauthorized'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
     restartdns:
       post:
         summary: Restart pihole-FTL
@@ -78,16 +78,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/schemas/success'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/success'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     flush_logs:
       post:
         summary: Flush the DNS logs
@@ -103,16 +103,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/schemas/success'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/success'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     flush_arp:
       post:
         summary: Flush the network table
@@ -128,23 +128,23 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/schemas/success'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/success'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '403':
             description: Forbidden
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'action.yaml#/components/errors/forbidden'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/action.yaml#/components/errors/forbidden'
 
   errors:
     forbidden:

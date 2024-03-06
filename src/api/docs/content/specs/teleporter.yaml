@@ -24,8 +24,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       post:
         summary: Import Pi-hole settings
         tags:
@@ -49,27 +49,27 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'teleporter.yaml#/components/schemas/teleporter/post'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/teleporter.yaml#/components/schemas/teleporter/post'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   teleporter:
-                    $ref: 'teleporter.yaml#/components/examples/teleporter'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/teleporter.yaml#/components/examples/teleporter'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'teleporter.yaml#/components/errors/invalid_zip'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/teleporter.yaml#/components/errors/invalid_zip'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     teleporter:
       post:

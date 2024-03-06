@@ -4,9 +4,9 @@ components:
     type_kind_domain:
       summary: Modify domains and regular expressions
       parameters:
-        - $ref: 'domains.yaml#/components/parameters/type'
-        - $ref: 'domains.yaml#/components/parameters/kind'
-        - $ref: 'domains.yaml#/components/parameters/domain'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/parameters/type'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/parameters/kind'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/parameters/domain'
       get:
         summary: Get domain
         tags:
@@ -41,19 +41,19 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'domains.yaml#/components/schemas/domains/get'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domains/get'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   domains:
-                    $ref: 'domains.yaml#/components/examples/domains'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/domains'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       put:
         summary: Replace domain
         tags:
@@ -76,8 +76,8 @@ components:
             'application/json':
               schema:
                 allOf:
-                  - $ref: 'domains.yaml#/components/schemas/domains/put'
-                  - $ref: 'common.yaml#/components/schemas/took'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domains/put'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
         responses:
           '201':
             description: Created domain
@@ -85,39 +85,39 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'domains.yaml#/components/schemas/domains/get' # identical to GET
-                    - $ref: 'domains.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domains/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   domains:
-                    $ref: 'domains.yaml#/components/examples/domains'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/domains'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   list_imprecise:
-                    $ref: 'domains.yaml#/components/examples/errors/uri_error/list_imprecise'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/uri_error/list_imprecise'
                   item_missing:
-                    $ref: 'domains.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/uri_error/item_missing'
                   no_payload:
-                    $ref: 'domains.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/bad_request/no_payload'
                   duplicate:
-                    $ref: 'domains.yaml#/components/examples/errors/database_error/duplicate'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/database_error/duplicate'
                   invalid_regex:
-                    $ref: 'domains.yaml#/components/examples/errors/regex_error/invalid_regex'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/regex_error/invalid_regex'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       delete:
         summary: Delete domain
         tags:
@@ -133,32 +133,32 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   list_imprecise:
-                    $ref: 'domains.yaml#/components/examples/errors/uri_error/list_imprecise'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/uri_error/list_imprecise'
                   item_missing:
-                    $ref: 'domains.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/uri_error/item_missing'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     type_kind:
       parameters:
-        - $ref: 'domains.yaml#/components/parameters/type'
-        - $ref: 'domains.yaml#/components/parameters/kind'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/parameters/type'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/parameters/kind'
       post:
         summary: Add new domain
         tags:
@@ -179,7 +179,7 @@ components:
           content:
             application/json:
               schema:
-                $ref: 'domains.yaml#/components/schemas/domains/post'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domains/post'
         responses:
           '201':
             description: Created domain
@@ -187,37 +187,37 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'domains.yaml#/components/schemas/domains/get' # identical to GET
-                    - $ref: 'domains.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domains/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             headers:
               Location:
-                $ref: 'common.yaml#/components/headers/Location'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/headers/Location'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   list_imprecise:
-                    $ref: 'domains.yaml#/components/examples/errors/uri_error/list_imprecise'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/uri_error/list_imprecise'
                   no_payload:
-                    $ref: 'domains.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/bad_request/no_payload'
                   duplicate:
-                    $ref: 'domains.yaml#/components/examples/errors/database_error/duplicate'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/database_error/duplicate'
                   invalid_regex:
-                    $ref: 'domains.yaml#/components/examples/errors/regex_error/invalid_regex'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/regex_error/invalid_regex'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     batchDelete:
       summary: Delete multiple domains
       post:
@@ -262,26 +262,26 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   no_payload:
-                    $ref: 'domains.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/examples/errors/bad_request/no_payload'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     domains:
       get:
@@ -292,27 +292,27 @@ components:
             description: Array of domains
             items:
               allOf:
-                - $ref: 'domains.yaml#/components/schemas/domain_object'
-                - $ref: 'domains.yaml#/components/schemas/unicode'
-                - $ref: 'domains.yaml#/components/schemas/type'
-                - $ref: 'domains.yaml#/components/schemas/kind'
-                - $ref: 'domains.yaml#/components/schemas/comment'
-                - $ref: 'domains.yaml#/components/schemas/groups'
-                - $ref: 'domains.yaml#/components/schemas/enabled'
-                - $ref: 'domains.yaml#/components/schemas/readonly'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domain_object'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/unicode'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/type'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/kind'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/comment'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/groups'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/enabled'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/readonly'
       put:
         allOf:
-          - $ref: 'domains.yaml#/components/schemas/type'
-          - $ref: 'domains.yaml#/components/schemas/kind'
-          - $ref: 'domains.yaml#/components/schemas/comment'
-          - $ref: 'domains.yaml#/components/schemas/groups'
-          - $ref: 'domains.yaml#/components/schemas/enabled'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/type'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/kind'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/groups'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/enabled'
       post:
         allOf:
-          - $ref: 'domains.yaml#/components/schemas/domain_maybe_array'
-          - $ref: 'domains.yaml#/components/schemas/comment'
-          - $ref: 'domains.yaml#/components/schemas/groups'
-          - $ref: 'domains.yaml#/components/schemas/enabled'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domain_maybe_array'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/groups'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/enabled'
     domain:
       description: Domain
       type: string
@@ -335,13 +335,13 @@ components:
       properties:
         domain:
           oneOf:
-            - $ref: 'domains.yaml#/components/schemas/domain'
-            - $ref: 'domains.yaml#/components/schemas/domain_array'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domain'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domain_array'
     domain_object:
       type: object
       properties:
         domain:
-          $ref: 'domains.yaml#/components/schemas/domain'
+          $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/domains.yaml#/components/schemas/domain'
     type:
       type: object
       properties:

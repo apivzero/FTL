@@ -4,7 +4,7 @@ components:
     client:
       summary: Modify client
       parameters:
-        - $ref: 'clients.yaml#/components/parameters/client'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/parameters/client'
       get:
         summary: Get clients
         tags:
@@ -23,19 +23,19 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'clients.yaml#/components/schemas/clients/get'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/clients/get'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   clients:
-                    $ref: 'clients.yaml#/components/examples/clients'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/clients'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       put:
         summary: Replace client
         tags:
@@ -52,8 +52,8 @@ components:
             application/json:
               schema:
                 allOf:
-                  - $ref: 'clients.yaml#/components/schemas/clients/put'
-                  - $ref: 'common.yaml#/components/schemas/took'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/clients/put'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
         responses:
           '201':
             description: Created item
@@ -61,30 +61,30 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'clients.yaml#/components/schemas/clients/get' # identical to GET
-                    - $ref: 'clients.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/clients/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   item_missing:
-                    $ref: 'clients.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/uri_error/item_missing'
                   no_payload:
-                    $ref: 'clients.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/bad_request/no_payload'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       delete:
         summary: Delete client
         tags:
@@ -100,26 +100,26 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   item_missing:
-                    $ref: 'clients.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/uri_error/item_missing'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     suggestions:
       get:
         summary: Get client suggestions
@@ -135,16 +135,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'clients.yaml#/components/schemas/suggestions'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/suggestions'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     direct:
       post:
         summary: Add new client
@@ -169,8 +169,8 @@ components:
             'application/json':
               schema:
                 allOf:
-                  - $ref: 'clients.yaml#/components/schemas/clients/post'
-                  - $ref: 'common.yaml#/components/schemas/took'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/clients/post'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
         responses:
           '201':
             description: Created item
@@ -178,33 +178,33 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'clients.yaml#/components/schemas/clients/get' # identical to GET
-                    - $ref: 'clients.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/clients/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             headers:
               Location:
-                $ref: 'common.yaml#/components/headers/Location'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/headers/Location'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/schemas/took'
-                    - $ref: 'common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
                 examples:
                   no_payload:
-                    $ref: 'clients.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/bad_request/no_payload'
                   duplicate:
-                    $ref: 'clients.yaml#/components/examples/errors/database_error/duplicate'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/database_error/duplicate'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/schemas/took'
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
     batchDelete:
       post:
         summary: Delete multiple clients
@@ -244,26 +244,26 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   no_payload:
-                    $ref: 'clients.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/examples/errors/bad_request/no_payload'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     clients:
       get:
@@ -274,19 +274,19 @@ components:
             description: Array of clients
             items:
               allOf:
-                - $ref: 'clients.yaml#/components/schemas/client_object'
-                - $ref: 'clients.yaml#/components/schemas/comment'
-                - $ref: 'clients.yaml#/components/schemas/groups'
-                - $ref: 'clients.yaml#/components/schemas/readonly'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/client_object'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/comment'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/groups'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/readonly'
       post:
         allOf:
-          - $ref: 'clients.yaml#/components/schemas/client_maybe_array'
-          - $ref: 'clients.yaml#/components/schemas/comment'
-          - $ref: 'clients.yaml#/components/schemas/groups'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/client_maybe_array'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/groups'
       put:
         allOf:
-          - $ref: 'clients.yaml#/components/schemas/comment'
-          - $ref: 'clients.yaml#/components/schemas/groups'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/groups'
     suggestions:
       type: object
       properties:
@@ -331,13 +331,13 @@ components:
       properties:
         client:
           oneOf:
-            - $ref: 'clients.yaml#/components/schemas/client'
-            - $ref: 'clients.yaml#/components/schemas/client_array'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/client'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/client_array'
     client_object:
       type: object
       properties:
         client:
-          $ref: 'clients.yaml#/components/schemas/client'
+          $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/clients.yaml#/components/schemas/client'
     comment:
       type: object
       properties:

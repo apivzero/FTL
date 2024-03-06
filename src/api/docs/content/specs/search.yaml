@@ -3,16 +3,16 @@ components:
   paths:
     search:
       parameters:
-        - $ref: 'search.yaml#/components/parameters/domain'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/search.yaml#/components/parameters/domain'
       get:
         summary: Search domains in Pi-hole's lists
         tags:
           - "List management"
         operationId: "get_search"
         parameters:
-          - $ref: 'search.yaml#/components/parameters/partial'
-          - $ref: 'search.yaml#/components/parameters/N'
-          - $ref: 'search.yaml#/components/parameters/debug'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/search.yaml#/components/parameters/partial'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/search.yaml#/components/parameters/N'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/search.yaml#/components/parameters/debug'
         description: |
           Search for domains in Pi-hole's list. The specified domain is automatically converted to lowercase.
           The optional parameters `N` and `partial` limit the maximum number of returned records and whether partial matches should be returned, respectively.
@@ -27,16 +27,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'search.yaml#/components/schemas/search'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/search.yaml#/components/schemas/search'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     search:
       type: object

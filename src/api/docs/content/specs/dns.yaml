@@ -18,9 +18,9 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'dns.yaml#/components/schemas/blocking'
-                    - $ref: 'dns.yaml#/components/schemas/timer'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/blocking'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/timer'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       post:
         summary: Change current blocking status
         tags:
@@ -39,8 +39,8 @@ components:
             'application/json':
               schema:
                 allOf:
-                  - $ref: 'dns.yaml#/components/schemas/blocking_bool'
-                  - $ref: 'dns.yaml#/components/schemas/timer'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/blocking_bool'
+                  - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/timer'
         responses:
           '200':
             description: OK
@@ -48,9 +48,9 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'dns.yaml#/components/schemas/blocking'
-                    - $ref: 'dns.yaml#/components/schemas/timer'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/blocking'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/timer'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
@@ -58,17 +58,17 @@ components:
                 schema:
                   allOf:
                     - oneOf:
-                      - $ref: 'dns.yaml#/components/schemas/errors/no_payload'
-                      - $ref: 'dns.yaml#/components/schemas/errors/item_missing'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/errors/no_payload'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/dns.yaml#/components/schemas/errors/item_missing'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     blocking:
       type: object

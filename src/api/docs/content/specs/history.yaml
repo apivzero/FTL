@@ -16,16 +16,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'history.yaml#/components/schemas/total_history'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/history.yaml#/components/schemas/total_history'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database_history:
       get:
         summary: Get activity graph data (long-term data)
@@ -35,8 +35,8 @@ components:
         description: |
           Request long-term data needed to generate the activity graph
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
         responses:
           '200':
             description: OK
@@ -44,16 +44,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'history.yaml#/components/schemas/total_history'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/history.yaml#/components/schemas/total_history'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
     clients:
       get:
@@ -70,7 +70,7 @@ components:
 
           Note that, due to privacy settings, the returned data may also be empty.
         parameters:
-          - $ref: 'history.yaml#/components/parameters/clients/N'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/history.yaml#/components/parameters/clients/N'
         responses:
           '200':
             description: OK
@@ -78,16 +78,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'history.yaml#/components/schemas/client_history'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/history.yaml#/components/schemas/client_history'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database_clients:
       get:
         summary: Get per-client activity graph data (long-term data)
@@ -97,8 +97,8 @@ components:
         description: |
           Request long-term data needed to generate the client activity graph
         parameters:
-          - $ref: 'common.yaml#/components/parameters/database/from'
-          - $ref: 'common.yaml#/components/parameters/database/until'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/from'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/parameters/database/until'
         responses:
           '200':
             description: OK
@@ -106,16 +106,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'history.yaml#/components/schemas/client_history'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/history.yaml#/components/schemas/client_history'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
   schemas:
     total_history:

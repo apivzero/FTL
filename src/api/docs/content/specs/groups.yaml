@@ -4,7 +4,7 @@ components:
     name:
       summary: Modify group
       parameters:
-        - $ref: 'groups.yaml#/components/parameters/name'
+        - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/parameters/name'
       get:
         summary: Get groups
         tags:
@@ -23,19 +23,19 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'groups.yaml#/components/schemas/groups/get'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/groups/get'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   groups:
-                    $ref: 'groups.yaml#/components/examples/groups'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/groups'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       put:
         summary: Replace group
         tags:
@@ -52,7 +52,7 @@ components:
           content:
             application/json:
               schema:
-                $ref: 'groups.yaml#/components/schemas/groups/put'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/groups/put'
         responses:
           '201':
             description: Created item
@@ -60,33 +60,33 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'groups.yaml#/components/schemas/groups/get' # identical to GET
-                    - $ref: 'groups.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/groups/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             headers:
               Location:
-                $ref: 'common.yaml#/components/headers/Location'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/headers/Location'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   item_missing:
-                    $ref: 'groups.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/uri_error/item_missing'
                   no_payload:
-                    $ref: 'groups.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/bad_request/no_payload'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       delete:
         summary: Delete group
         tags:
@@ -102,26 +102,26 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   item_missing:
-                    $ref: 'groups.yaml#/components/examples/errors/uri_error/item_missing'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/uri_error/item_missing'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     direct:
       post:
         summary: Add new group
@@ -139,7 +139,7 @@ components:
           content:
             application/json:
                 schema:
-                  $ref: 'groups.yaml#/components/schemas/groups/post'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/groups/post'
         responses:
           '201':
             description: Created item
@@ -147,33 +147,33 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'groups.yaml#/components/schemas/groups/get' # identical to GET
-                    - $ref: 'groups.yaml#/components/schemas/lists_processed'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/groups/get' # identical to GET
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/lists_processed'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             headers:
               Location:
-                $ref: 'common.yaml#/components/headers/Location'
+                $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/headers/Location'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   no_payload:
-                    $ref: 'groups.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/bad_request/no_payload'
                   duplicate:
-                    $ref: 'groups.yaml#/components/examples/errors/database_error/duplicate'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/database_error/duplicate'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     batchDelete:
       post:
         summary: Delete multiple groups
@@ -209,28 +209,28 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   no_payload:
-                    $ref: 'groups.yaml#/components/examples/errors/bad_request/no_payload'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/bad_request/no_payload'
                   duplicate:
-                    $ref: 'groups.yaml#/components/examples/errors/database_error/duplicate'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/examples/errors/database_error/duplicate'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     groups:
       get:
@@ -240,21 +240,21 @@ components:
             type: array
             items:
               allOf:
-                - $ref: 'groups.yaml#/components/schemas/name_object'
-                - $ref: 'groups.yaml#/components/schemas/comment'
-                - $ref: 'groups.yaml#/components/schemas/enabled'
-                - $ref: 'groups.yaml#/components/schemas/readonly'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name_object'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/comment'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/enabled'
+                - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/readonly'
       put:
         allOf:
           # Can rename group
-          - $ref: 'groups.yaml#/components/schemas/name_object'
-          - $ref: 'groups.yaml#/components/schemas/comment'
-          - $ref: 'groups.yaml#/components/schemas/enabled'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name_object'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/enabled'
       post:
         allOf:
-          - $ref: 'groups.yaml#/components/schemas/name_maybe_array'
-          - $ref: 'groups.yaml#/components/schemas/comment'
-          - $ref: 'groups.yaml#/components/schemas/enabled'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name_maybe_array'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/comment'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/enabled'
     name:
       description: Group name
       type: string
@@ -270,13 +270,13 @@ components:
       properties:
         name:
           oneOf:
-            - $ref: 'groups.yaml#/components/schemas/name'
-            - $ref: 'groups.yaml#/components/schemas/name_array'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name_array'
     name_object:
       type: object
       properties:
         name:
-          $ref: 'groups.yaml#/components/schemas/name'
+          $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/groups.yaml#/components/schemas/name'
     comment:
       type: object
       properties:

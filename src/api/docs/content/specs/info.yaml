@@ -18,11 +18,11 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/client/remote_addr'
-                    - $ref: 'info.yaml#/components/schemas/client/http_version'
-                    - $ref: 'info.yaml#/components/schemas/client/method'
-                    - $ref: 'info.yaml#/components/schemas/client/headers'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/client/remote_addr'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/client/http_version'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/client/method'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/client/headers'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     logs:
       dns:
         get:
@@ -39,7 +39,7 @@ components:
             The expected behavior for an immediate re-request of a log line with the same ID is an empty response.
             As soon as the next message arrived, this will be included in your request and `nextID` is incremented by one.
           parameters:
-            - $ref: 'info.yaml#/components/parameters/logs/dns/nextID'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/parameters/logs/dns/nextID'
           responses:
             '200':
               description: OK
@@ -47,17 +47,17 @@ components:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'info.yaml#/components/schemas/logs/dns/log'
-                      - $ref: 'info.yaml#/components/schemas/logs/dns/nextID'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/logs/dns/log'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/logs/dns/nextID'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             '401':
               description: Unauthorized
               content:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'common.yaml#/components/errors/unauthorized'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     system:
       get:
         summary: Get info about various system parameters
@@ -73,16 +73,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/system'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/system'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     host:
       get:
         summary: Get info about various host parameters
@@ -98,16 +98,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/host'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/host'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     ftl:
       get:
         summary: Get info about various ftl parameters
@@ -123,16 +123,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/ftl'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/ftl'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     sensors:
       get:
         summary: Get info about various sensors
@@ -148,16 +148,16 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/sensors'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/sensors'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     database:
       get:
         summary: Get info about long-term database
@@ -173,8 +173,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/database'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/database'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     version:
       get:
         summary: Get Pi-hole version
@@ -190,8 +190,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/version'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/version'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     messages:
       get:
         summary: Get Pi-hole diagnosis messages
@@ -207,8 +207,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/messages'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/messages'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     messages_with_id:
       delete:
         summary: Delete Pi-hole diagnosis message
@@ -216,7 +216,7 @@ components:
           - "FTL information"
         operationId: "delete_message"
         parameters:
-          - $ref: 'info.yaml#/components/parameters/message_id'
+          - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/parameters/message_id'
         description: |
           You may specify multiple IDs to delete multiple messages at once (comma-separated in the path like `1,2,3`)
         responses:
@@ -227,28 +227,28 @@ components:
             content:
               application/json:
                 schema:
-                  $ref: 'common.yaml#/components/schemas/took'
+                  $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
           '400':
             description: Bad request
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/bad_request'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/bad_request'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   uri_error:
-                    $ref: 'info.yaml#/components/examples/errors/messages/uri_error'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/examples/errors/messages/uri_error'
                   bad_request:
-                    $ref: 'info.yaml#/components/examples/errors/messages/bad_request'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/examples/errors/messages/bad_request'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     messages_count:
       get:
         summary: Get count of Pi-hole diagnosis messages
@@ -264,8 +264,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/count'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/count'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     metrics:
       get:
         summary: Get metrics info
@@ -281,19 +281,19 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/metrics'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/metrics'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
                 examples:
                   metrics:
-                    $ref: 'info.yaml#/components/examples/metrics'
+                    $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/examples/metrics'
           '401':
             description: Unauthorized
             content:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'common.yaml#/components/errors/unauthorized'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
     login:
       get:
         summary: Login page related information
@@ -310,8 +310,8 @@ components:
               application/json:
                 schema:
                   allOf:
-                    - $ref: 'info.yaml#/components/schemas/login'
-                    - $ref: 'common.yaml#/components/schemas/took'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/info.yaml#/components/schemas/login'
+                    - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
 
   schemas:
     client:

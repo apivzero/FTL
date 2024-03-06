@@ -17,7 +17,7 @@ components:
             The expected behavior for an immediate re-request of a log line with the same ID is an empty response.
             As soon as the next message arrived, this will be included in your request and `nextID` is incremented by one.
           parameters:
-            - $ref: 'logs.yaml#/components/parameters/logs/dnsmasq/nextID'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/parameters/logs/dnsmasq/nextID'
           responses:
             '200':
               description: OK
@@ -25,16 +25,16 @@ components:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'logs.yaml#/components/schemas/logs/dnsmasq/log'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/schemas/logs/dnsmasq/log'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             '401':
               description: Unauthorized
               content:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'common.yaml#/components/errors/unauthorized'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       ftl:
         get:
           summary: Get DNS log content
@@ -50,7 +50,7 @@ components:
             The expected behavior for an immediate re-request of a log line with the same ID is an empty response.
             As soon as the next message arrived, this will be included in your request and `nextID` is incremented by one.
           parameters:
-            - $ref: 'logs.yaml#/components/parameters/logs/dnsmasq/nextID'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/parameters/logs/dnsmasq/nextID'
           responses:
             '200':
               description: OK
@@ -58,16 +58,16 @@ components:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'logs.yaml#/components/schemas/logs/dnsmasq/log'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/schemas/logs/dnsmasq/log'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             '401':
               description: Unauthorized
               content:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'common.yaml#/components/errors/unauthorized'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
       webserver:
         get:
           summary: Get DNS log content
@@ -83,7 +83,7 @@ components:
             The expected behavior for an immediate re-request of a log line with the same ID is an empty response.
             As soon as the next message arrived, this will be included in your request and `nextID` is incremented by one.
           parameters:
-            - $ref: 'logs.yaml#/components/parameters/logs/dnsmasq/nextID'
+            - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/parameters/logs/dnsmasq/nextID'
           responses:
             '200':
               description: OK
@@ -91,16 +91,16 @@ components:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'logs.yaml#/components/schemas/logs/dnsmasq/log'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/logs.yaml#/components/schemas/logs/dnsmasq/log'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
             '401':
               description: Unauthorized
               content:
                 application/json:
                   schema:
                     allOf:
-                      - $ref: 'common.yaml#/components/errors/unauthorized'
-                      - $ref: 'common.yaml#/components/schemas/took'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/errors/unauthorized'
+                      - $ref: 'https://raw.githubusercontent.com/apivzero/FTL/development-v6/src/api/docs/content/specs/common.yaml#/components/schemas/took'
   schemas:
     logs:
       dnsmasq:
