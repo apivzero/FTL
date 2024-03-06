@@ -68,208 +68,208 @@ tags:
 
 paths:
   /auth:
-    $ref: 'auth.yaml#/components/paths/auth'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/auth.yaml#/components/paths/auth'
 
   /auth/session/{id}:
-    $ref: 'auth.yaml#/components/paths/session'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/auth.yaml#/components/paths/session'
 
   /auth/sessions:
-    $ref: 'auth.yaml#/components/paths/session_list'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/auth.yaml#/components/paths/session_list'
 
   /auth/totp:
-    $ref: 'auth.yaml#/components/paths/totp'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/auth.yaml#/components/paths/totp'
 
   /auth/app:
-    $ref: 'auth.yaml#/components/paths/app'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/auth.yaml#/components/paths/app'
 
   /stats/summary:
-    $ref: 'stats.yaml#/components/paths/summary'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/summary'
 
   /stats/database/summary:
-    $ref: 'stats.yaml#/components/paths/database_summary'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/database_summary'
 
   /stats/upstreams:
-    $ref: 'stats.yaml#/components/paths/upstreams'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/upstreams'
 
   /stats/database/upstreams:
-    $ref: 'stats.yaml#/components/paths/database_upstreams'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/database_upstreams'
 
   /stats/top_domains:
-    $ref: 'stats.yaml#/components/paths/top_domains'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/top_domains'
 
   /stats/database/top_domains:
-    $ref: 'stats.yaml#/components/paths/database_top_domains'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/database_top_domains'
 
   /stats/top_clients:
-    $ref: 'stats.yaml#/components/paths/top_clients'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/top_clients'
 
   /stats/database/top_clients:
-    $ref: 'stats.yaml#/components/paths/database_top_clients'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/database_top_clients'
 
   /stats/query_types:
-    $ref: 'stats.yaml#/components/paths/query_types'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/query_types'
 
   /stats/database/query_types:
-    $ref: 'stats.yaml#/components/paths/database_query_types'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/database_query_types'
 
   /stats/recent_blocked:
-    $ref: 'stats.yaml#/components/paths/recent_blocked'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/stats.yaml#/components/paths/recent_blocked'
 
   /history:
-    $ref: 'history.yaml#/components/paths/history'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/history.yaml#/components/paths/history'
 
   /history/clients:
-    $ref: 'history.yaml#/components/paths/clients'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/history.yaml#/components/paths/clients'
 
   /history/database:
-    $ref: 'history.yaml#/components/paths/database_history'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/history.yaml#/components/paths/database_history'
 
   /history/database/clients:
-    $ref: 'history.yaml#/components/paths/database_clients'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/history.yaml#/components/paths/database_clients'
 
   /queries:
-    $ref: 'queries.yaml#/components/paths/queries'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/queries.yaml#/components/paths/queries'
 
   /queries/suggestions:
-    $ref: 'queries.yaml#/components/paths/suggestions'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/queries.yaml#/components/paths/suggestions'
 
   /dns/blocking:
-    $ref: 'dns.yaml#/components/paths/blocking'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/dns.yaml#/components/paths/blocking'
 
   /domains/{type}/{kind}/{domain}:
-    $ref: 'domains.yaml#/components/paths/type_kind_domain'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/domains.yaml#/components/paths/type_kind_domain'
 
   /domains/{type}/{kind}:
-    $ref: 'domains.yaml#/components/paths/type_kind'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/domains.yaml#/components/paths/type_kind'
 
   /domains:batchDelete:
-    $ref: 'domains.yaml#/components/paths/batchDelete'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/domains.yaml#/components/paths/batchDelete'
 
   /groups/{name}:
-    $ref: 'groups.yaml#/components/paths/name'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/groups.yaml#/components/paths/name'
 
   /groups:
-    $ref: 'groups.yaml#/components/paths/direct'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/groups.yaml#/components/paths/direct'
 
   /groups:batchDelete:
-    $ref: 'groups.yaml#/components/paths/batchDelete'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/groups.yaml#/components/paths/batchDelete'
 
   /clients/{client}:
-    $ref: 'clients.yaml#/components/paths/client'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/clients.yaml#/components/paths/client'
 
   /clients:
-    $ref: 'clients.yaml#/components/paths/direct'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/clients.yaml#/components/paths/direct'
 
   /clients:batchDelete:
-    $ref: 'clients.yaml#/components/paths/batchDelete'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/clients.yaml#/components/paths/batchDelete'
 
   /clients/_suggestions:
-    $ref: 'clients.yaml#/components/paths/suggestions'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/clients.yaml#/components/paths/suggestions'
 
   /lists/{list}:
-    $ref: 'lists.yaml#/components/paths/list'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/lists.yaml#/components/paths/list'
 
   /lists:
-    $ref: 'lists.yaml#/components/paths/direct'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/lists.yaml#/components/paths/direct'
 
   /lists:batchDelete:
-    $ref: 'lists.yaml#/components/paths/batchDelete'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/lists.yaml#/components/paths/batchDelete'
 
   /info/client:
-    $ref: 'info.yaml#/components/paths/client'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/client'
 
   /info/system:
-    $ref: 'info.yaml#/components/paths/system'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/system'
 
   /info/database:
-    $ref: 'info.yaml#/components/paths/database'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/database'
 
   /info/ftl:
-    $ref: 'info.yaml#/components/paths/ftl'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/ftl'
 
   /info/host:
-    $ref: 'info.yaml#/components/paths/host'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/host'
 
   /info/sensors:
-    $ref: 'info.yaml#/components/paths/sensors'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/sensors'
 
   /info/version:
-    $ref: 'info.yaml#/components/paths/version'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/version'
 
   /info/messages:
-    $ref: 'info.yaml#/components/paths/messages'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/messages'
 
   /info/messages/{message_id}:
-    $ref: 'info.yaml#/components/paths/messages_with_id'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/messages_with_id'
 
   /info/messages/count:
-    $ref: 'info.yaml#/components/paths/messages_count'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/messages_count'
 
   /info/metrics:
-    $ref: 'info.yaml#/components/paths/metrics'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/metrics'
 
   /info/login:
-    $ref: 'info.yaml#/components/paths/login'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/info.yaml#/components/paths/login'
 
   /logs/dnsmasq:
-    $ref: 'logs.yaml#/components/paths/logs/dnsmasq'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/logs.yaml#/components/paths/logs/dnsmasq'
 
   /logs/ftl:
-    $ref: 'logs.yaml#/components/paths/logs/ftl'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/logs.yaml#/components/paths/logs/ftl'
 
   /logs/webserver:
-    $ref: 'logs.yaml#/components/paths/logs/webserver'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/logs.yaml#/components/paths/logs/webserver'
 
   /endpoints:
-    $ref: 'endpoints.yaml#/components/paths/endpoints'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/endpoints.yaml#/components/paths/endpoints'
 
   /config:
-    $ref: 'config.yaml#/components/paths/config'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/config.yaml#/components/paths/config'
 
   /config/{element}:
-    $ref: 'config.yaml#/components/paths/config_elem'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/config.yaml#/components/paths/config_elem'
 
   /config/{element}/{value}:
-    $ref: 'config.yaml#/components/paths/config_elem_value'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/config.yaml#/components/paths/config_elem_value'
 
   /network/devices:
-    $ref: 'network.yaml#/components/paths/devices'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/network.yaml#/components/paths/devices'
 
   /network/devices/{device_id}:
-    $ref: 'network.yaml#/components/paths/devices_id'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/network.yaml#/components/paths/devices_id'
 
   /network/gateway:
-    $ref: 'network.yaml#/components/paths/gateway'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/network.yaml#/components/paths/gateway'
 
   /network/interfaces:
-    $ref: 'network.yaml#/components/paths/interfaces'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/network.yaml#/components/paths/interfaces'
 
   /teleporter:
-    $ref: 'teleporter.yaml#/components/paths/teleporter'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/teleporter.yaml#/components/paths/teleporter'
 
   /action/gravity:
-    $ref: 'action.yaml#/components/paths/gravity'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/action.yaml#/components/paths/gravity'
 
   /action/restartdns:
-    $ref: 'action.yaml#/components/paths/restartdns'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/action.yaml#/components/paths/restartdns'
 
   /action/flush/logs:
-    $ref: 'action.yaml#/components/paths/flush_logs'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/action.yaml#/components/paths/flush_logs'
 
   /action/flush/arp:
-    $ref: 'action.yaml#/components/paths/flush_arp'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/action.yaml#/components/paths/flush_arp'
 
   /dhcp/leases:
-    $ref: 'dhcp.yaml#/components/paths/leases'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/dhcp.yaml#/components/paths/leases'
 
   /dhcp/leases/{ip}:
-    $ref: 'dhcp.yaml#/components/paths/leases_ip'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/dhcp.yaml#/components/paths/leases_ip'
 
   /search/{domain}:
-    $ref: 'search.yaml#/components/paths/search'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/search.yaml#/components/paths/search'
 
   /docs:
-    $ref: 'docs.yaml#/components/paths/docs'
+    $ref: 'https://github.com/apivzero/FTL/tree/development-v6/src/api/docs/content/specs/docs.yaml#/components/paths/docs'
 
 components:
   securitySchemes:
