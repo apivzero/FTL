@@ -262,7 +262,7 @@ sudo pihole-FTL --config dns.dnssec true
                     # Format as YAML multiline string with pipe syntax
                     # Use smart splitting that respects quoted strings
                     items = parse_array_items(array_content)
-                    documentation.append(f"      {env_var}: |")
+                    documentation.append(f"      {env_var}: |-")
                     for item in items:
                         documentation.append(f"        {item}")
                 else:
