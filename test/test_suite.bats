@@ -1852,6 +1852,57 @@
   [[ ${lines[0]} == "0" ]]
 }
 
+@test "API: /queries cursor is stable and paging uses start" {
+  # Generate enough unique queries for deterministic paging
+  for i in $(seq 0 11); do
+    dig +tries=1 +time=1 @127.0.0.1 "cursorstable-${i}.example.com" A > /dev/null
+  done
+
+  # Wait until generated queries are persisted (DB writes can be async)
+  count=0
+  for attempt in $(seq 1 50); do
+    run bash -c 'curl -s "127.0.0.1/api/queries?domain=cursorstable-*&length=100" | jq ".queries | length"'
+    printf "%s\n" "${lines[@]}"
+    count="${lines[0]}"
+    if [[ "${count}" =~ ^[0-9]+$ ]] && [[ "${count}" -ge 10 ]]; then
+      break
+    fi
+    sleep 0.2
+  done
+  [[ "${count}" -ge 10 ]]
+
+  # First request returns a cursor snapshot anchor
+  run bash -c 'curl -s "127.0.0.1/api/queries?domain=cursorstable-*&length=5" | jq -r ".cursor"'
+  printf "%s\n" "${lines[@]}"
+  cursor="${lines[0]}"
+  [[ "${cursor}" != "null" ]]
+  [[ "${cursor}" =~ ^[0-9]+$ ]]
+
+  # Page 1 (start=0) under that cursor
+  run bash -c "curl -s \"127.0.0.1/api/queries?domain=cursorstable-*&length=5&start=0&cursor=${cursor}\" | jq -r '.cursor'"
+  printf "%s\n" "${lines[@]}"
+  [[ "${lines[0]}" == "${cursor}" ]]
+
+  run bash -c "curl -s \"127.0.0.1/api/queries?domain=cursorstable-*&length=5&start=0&cursor=${cursor}\" | jq -r '.queries[].id'"
+  printf "%s\n" "${lines[@]}"
+  [[ ${#lines[@]} -eq 5 ]]
+  page1_ids=("${lines[@]}")
+
+  # Page 2 (start=5) under the same cursor
+  run bash -c "curl -s \"127.0.0.1/api/queries?domain=cursorstable-*&length=5&start=5&cursor=${cursor}\" | jq -r '.cursor'"
+  printf "%s\n" "${lines[@]}"
+  [[ "${lines[0]}" == "${cursor}" ]]
+
+  run bash -c "curl -s \"127.0.0.1/api/queries?domain=cursorstable-*&length=5&start=5&cursor=${cursor}\" | jq -r '.queries[].id'"
+  printf "%s\n" "${lines[@]}"
+  [[ ${#lines[@]} -eq 5 ]]
+  page2_ids=("${lines[@]}")
+
+  # Ensure no overlap between pages
+  run bash -c 'printf "%s\n" "$@" | sort | uniq -d' _ "${page1_ids[@]}" "${page2_ids[@]}"
+  [[ -z "${output}" ]]
+}
+
 @test "Lua server page outside /admin is not served by default" {
   run bash -c 'curl -sI 127.0.0.1/broken_lua'
   printf "%s\n" "${lines[@]}"
