@@ -1858,6 +1858,19 @@
     dig +tries=1 +time=1 @127.0.0.1 "cursorstable-${i}.example.com" A > /dev/null
   done
 
+  # Wait until generated queries are persisted (DB writes can be async)
+  count=0
+  for attempt in $(seq 1 50); do
+    run bash -c 'curl -s "127.0.0.1/api/queries?domain=cursorstable-*&length=100" | jq ".queries | length"'
+    printf "%s\n" "${lines[@]}"
+    count="${lines[0]}"
+    if [[ "${count}" =~ ^[0-9]+$ ]] && [[ "${count}" -ge 10 ]]; then
+      break
+    fi
+    sleep 0.2
+  done
+  [[ "${count}" -ge 10 ]]
+
   # First request returns a cursor snapshot anchor
   run bash -c 'curl -s "127.0.0.1/api/queries?domain=cursorstable-*&length=5" | jq -r ".cursor"'
   printf "%s\n" "${lines[@]}"
