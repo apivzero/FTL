@@ -2231,6 +2231,13 @@ bool getNameFromMAC(const char *client, char hostn[MAXDOMAINLEN])
 	if(FTLDBerror())
 		return false;
 
+	// Check if we want to obtain names from MAC addresses at all
+	if(!config.resolver.macNames.v.b)
+	{
+		log_debug(DEBUG_RESOLVER, "getNameFromMAC(\"%s\") - configured to not obtain host name from MAC", client);
+		return false;
+	}
+
 	// Open pihole-FTL.db database file
 	sqlite3 *db = NULL;
 	if((db = dbopen(false, false)) == NULL)
