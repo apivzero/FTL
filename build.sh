@@ -152,9 +152,9 @@ fi
 mkdir -p "${builddir}"
 cd "${builddir}"
 if [[ -n ${cmake_args} ]]; then
-    cmake "${cmake_args}" ..
+    cmake "${cmake_args}" .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 else
-    cmake ..
+    cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 fi
 
 # If MAKEFLAGS is unset, we set it to "-j$(nproc)"
