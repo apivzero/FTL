@@ -15,6 +15,13 @@ set -e
 # Set builddir
 builddir="cmake/"
 
+# Enable export of compile commands so IDEs like VSCode can use this information
+# when rendering active and disabled code paths, e.g., for #ifdefs. The
+# compile_commands.json file is generated in the package specific build
+# directory containing the exact compiler calls for all translation units of the
+# project in machine-readable form (JSON).
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
+
 # Parse arguments
 # If the first argument starts in "-D", we pass it to CMake
 if [[ "${1}" == "-D"* ]]; then
@@ -152,9 +159,9 @@ fi
 mkdir -p "${builddir}"
 cd "${builddir}"
 if [[ -n ${cmake_args} ]]; then
-    cmake "${cmake_args}" .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    cmake "${cmake_args}" ..
 else
-    cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    cmake ..
 fi
 
 # If MAKEFLAGS is unset, we set it to "-j$(nproc)"
