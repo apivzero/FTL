@@ -211,8 +211,14 @@ static void __attribute__((noreturn)) signal_handler(int sig, siginfo_t *si, voi
 			case BUS_ADRALN:    log_info("     with code:  BUS_ADRALN (Invalid address alignment)"); break;
 			case BUS_ADRERR:    log_info("     with code:  BUS_ADRERR (Non-existent physical address)"); break;
 			case BUS_OBJERR:    log_info("     with code:  BUS_OBJERR (Object specific hardware error)"); break;
+#if defined (BUS_MCEERR_AR)
+			// 2025-May: not defined by uClibc
 			case BUS_MCEERR_AR: log_info("     with code:  BUS_MCEERR_AR (Hardware memory error: action required)"); break;
+#endif
+#if defined (BUS_MCEERR_AO)
+			// 2025-May: not defined by uClibc
 			case BUS_MCEERR_AO: log_info("     with code:  BUS_MCEERR_AO (Hardware memory error: action optional)"); break;
+#endif
 			default:            log_info("     with code:  Unknown (%i)", si->si_code); break;
 		}
 	}
