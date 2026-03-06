@@ -357,6 +357,15 @@ if(HAVE_RANDOM_H)
     target_compile_definitions(core PRIVATE USE_GETRANDOM)
 endif()
 
+check_include_file("execinfo.h" HAVE_EXECINFO_H)
+if(HAVE_EXECINFO_H)
+	message(STATUS "Building FTL with unwind support: YES")
+    target_compile_definitions(core PRIVATE USE_BACKTRACE)
+else()
+	message(STATUS "Building FTL with unwind support: NO")
+endif()
+
+
 option(USE_READLINE "Build FTL with readline support, if available" ON)
 
 find_library(LIBREADLINE NAMES libreadline${LIBRARY_SUFFIX} readline)
