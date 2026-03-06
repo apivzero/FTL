@@ -348,6 +348,15 @@ add_subdirectory(config)
 add_subdirectory(tools)
 add_subdirectory(ntp)
 
+# optional headers - may depend on type or version of the C standard library
+include(CheckIncludeFile)
+
+check_include_file("sys/random.h" HAVE_RANDOM_H)
+if(HAVE_RANDOM_H)
+    target_compile_definitions(config PRIVATE USE_GETRANDOM)
+    target_compile_definitions(core PRIVATE USE_GETRANDOM)
+endif()
+
 option(USE_READLINE "Build FTL with readline support, if available" ON)
 
 find_library(LIBREADLINE NAMES libreadline${LIBRARY_SUFFIX} readline)
