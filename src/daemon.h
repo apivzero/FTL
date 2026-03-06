@@ -48,6 +48,7 @@ pid_t FTL_gettid(void);
 #if !defined(__GLIBC__) || __GLIBC__ > 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 25)
 #include <sys/random.h>
 #else
+#define GRND_NONBLOCK 0x0001
 #define getrandom getrandom_fallback
 #endif
 
