@@ -1,5 +1,11 @@
 #!./test/libs/bats/bin/bats
 
+# Log the current test description to the FTL log at the start of each test.
+# `setup()` is run by bats before every `@test` block.
+setup() {
+  printf 'Starting test: %s\n' "$BATS_TEST_DESCRIPTION" >> /var/log/pihole/FTL.log
+}
+
 @test "Compare template and test TOML config files" {
   # We skip the first 5 lines of the files as they contain the version and
   # timestamp of the file creation/modification
@@ -792,7 +798,7 @@
   [[ "${lines[@]}" == "" ]]
 }
 
-@test "No \"database not available\" messages in FTL.log" {
+@test "No \"DB not available\" messages in FTL.log" {
   run bash -c 'grep -c "database not available" /var/log/pihole/FTL.log'
   printf "%s\n" "${lines[@]}"
   [[ ${lines[0]} == "0" ]]
@@ -2243,7 +2249,17 @@
 }
 
 @test "API validation" {
+  if [ "${CI_ARCH:-}" = "linux/riscv64" ]; then
+    skip "Skipping API validation on linux/riscv64"
+  fi
+  logsize_before=$(stat -c%s /var/log/pihole/FTL.log)
   run python3 test/api/checkAPI.py
+  printf "%s\n" "${lines[@]}"
+  [[ $status == 0 ]]
+
+  # Wait here until FTL has finished restarting after the teleporter import,
+  # otherwise the next test might start before FTL is ready
+  run bash -c "./pihole-FTL wait-for 'PID of FTL process:' /var/log/pihole/FTL.log 90 $logsize_before"
   printf "%s\n" "${lines[@]}"
   [[ $status == 0 ]]
 }
@@ -2342,7 +2358,10 @@
   logsize_before=$(stat -c%s /var/log/pihole/FTL.log)
   # Kill pihole-FTL after having completed tests
   # This will also shut down the debugger
-  run bash -c 'kill "$(pidof pihole-FTL)"'
+  pid=$(cat /run/pihole-FTL.pid)
+  printf "Killing pihole-FTL with PID %s\n" "$pid"
+
+  run bash -c "kill $pid"
   printf "%s\n" "${lines[@]}"
   [[ $status == 0 ]]
 
