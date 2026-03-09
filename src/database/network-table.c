@@ -278,6 +278,13 @@ static int find_device_by_hwaddr(sqlite3 *db, const char hwaddr[])
 	if(FTLDBerror())
 		return DB_FAILED;
 
+	// Return early if we know MAC addresses are not unique
+	if(!config.resolver.macNames.v.b)
+	{
+		log_debug(DEBUG_ARP, "find_device_by_hwaddr(%s) - returning early", hwaddr);
+		return DB_NODATA;
+	}
+
 	log_debug(DEBUG_ARP, "find_device_by_hwaddr(%s)", hwaddr);
 
 	const char *querystr = "SELECT id FROM network WHERE hwaddr = ?1 COLLATE NOCASE;";
@@ -2230,6 +2237,13 @@ bool getNameFromMAC(const char *client, char hostn[MAXDOMAINLEN])
 	// Return early if database is known to be broken
 	if(FTLDBerror())
 		return false;
+
+	// Check if we want to obtain names from MAC addresses at all
+	if(!config.resolver.macNames.v.b)
+	{
+		log_debug(DEBUG_RESOLVER, "getNameFromMAC(\"%s\") - configured to not obtain host name from MAC", client);
+		return false;
+	}
 
 	// Open pihole-FTL.db database file
 	sqlite3 *db = NULL;
