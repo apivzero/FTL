@@ -2136,6 +2136,22 @@ bool getNameFromIP(sqlite3 *db, char hostn[MAXDOMAINLEN], const char *ipaddr)
 		hostn[MAXDOMAINLEN - 1] = '\0';
 
 		log_debug(DEBUG_RESOLVER, "Found database host name (same address) %s -> %s", ipaddr, hostn);
+
+		// Check if there are further host names for the same IP address
+		// and log a warning if there are multiple different host names
+		// for the same IP address
+		while((rc = sqlite3_step(stmt)) == SQLITE_ROW)
+		{
+			char other_hostn[MAXDOMAINLEN];
+			strncpy(other_hostn, (char*)sqlite3_column_text(stmt, 0), MAXDOMAINLEN);
+			other_hostn[MAXDOMAINLEN - 1] = '\0';
+
+			if(strcmp(hostn, other_hostn) != 0)
+			{
+				log_warn("Multiple different host names for the same IP address %s: \"%s\" and \"%s\"",
+				         ipaddr, hostn, other_hostn);
+			}
+		}
 	}
 	else if(rc != SQLITE_DONE)
 	{
