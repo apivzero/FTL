@@ -948,6 +948,12 @@ void initConfig(struct config *conf)
 	conf->resolver.resolveIPv6.d.b = true;
 	conf->resolver.resolveIPv6.c = validate_stub; // Only type-based checking
 
+	conf->resolver.macNames.k = "resolver.macNames";
+	conf->resolver.macNames.h = "Control whether FTL should attempt to obtain client names from the network table by MAC address.\n\nThis can provide hostnames for devices that do not have a hostname or have multiple IP addresses (e.g. IPv4 and IPv6).\nHowever, MAC-derived names can be ambiguous (e.g., when a MAC appears for multiple IPs due to a router/NAT or MAC reuse), which may lead to incorrect hostnames being shown. Disabling this option can prevent such issues but may lead to more clients without hostnames.";
+	conf->resolver.macNames.t = CONF_BOOL;
+	conf->resolver.macNames.d.b = true;
+	conf->resolver.macNames.c = validate_stub; // Only type-based checking
+
 	conf->resolver.resolveIPv4.k = "resolver.resolveIPv4";
 	conf->resolver.resolveIPv4.h = "Should FTL try to resolve IPv4 addresses to hostnames?";
 	conf->resolver.resolveIPv4.t = CONF_BOOL;
@@ -1016,6 +1022,13 @@ void initConfig(struct config *conf)
 	conf->database.useWAL.d.b = true;
 	conf->database.useWAL.c = validate_stub; // Only type-based checking
 
+	conf->database.forceDisk.k = "database.forceDisk";
+	conf->database.forceDisk.h = "Should FTL force the use of disk storage for the history database? By default, FTL uses an in-memory database for much improved performance when browsing the history from the dashboard. However, on systems with very limited RAM and only occasional usage of the web interface, it may be useful to force the use of disk storage instead of holding everything in memory.\n\n Note that using disk storage *will* reduce performance, especially on systems with slow storage media (e.g., SD cards).";
+	conf->database.forceDisk.t = CONF_BOOL;
+	conf->database.forceDisk.f = FLAG_RESTART_FTL;
+	conf->database.forceDisk.d.b = false;
+	conf->database.forceDisk.c = validate_stub; // Only type-based checking
+
 	// sub-struct database.network
 	conf->database.network.parseARPcache.k = "database.network.parseARPcache";
 	conf->database.network.parseARPcache.h = "Should FTL analyze the local ARP cache? When disabled, client identification and the network table will stop working reliably.";
@@ -1071,7 +1084,7 @@ void initConfig(struct config *conf)
 	conf->webserver.headers.f = FLAG_RESTART_FTL;
 	conf->webserver.headers.d.json = cJSON_CreateArray();
 	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("X-DNS-Prefetch-Control: off"));
-	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("Content-Security-Policy: default-src 'none'; connect-src 'self'; font-src 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"));
+	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("Content-Security-Policy: default-src 'none'; connect-src 'self'; font-src 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self'"));
 	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("X-Frame-Options: DENY"));
 	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("X-XSS-Protection: 0"));
 	cJSON_AddItemToArray(conf->webserver.headers.d.json, cJSON_CreateStringReference("X-Content-Type-Options: nosniff"));
@@ -1304,8 +1317,17 @@ void initConfig(struct config *conf)
 	conf->files.database.h = "The location of FTL's long-term database";
 	conf->files.database.a = cJSON_CreateStringReference("Any FTL database");
 	conf->files.database.t = CONF_STRING;
+	conf->files.database.f = FLAG_RESTART_FTL;
 	conf->files.database.d.s = (char*)"/etc/pihole/pihole-FTL.db";
 	conf->files.database.c = validate_filepath;
+
+	conf->files.tmp_db.k = "files.tmp_db";
+	conf->files.tmp_db.h = "The location of FTL's short-term temporary database (only used when database.forceDisk is true)";
+	conf->files.tmp_db.a = cJSON_CreateStringReference("Any FTL database");
+	conf->files.tmp_db.t = CONF_STRING;
+	conf->files.tmp_db.f = FLAG_RESTART_FTL;
+	conf->files.tmp_db.d.s = (char*)"/etc/pihole/pihole-tmp.db";
+	conf->files.tmp_db.c = validate_filepath;
 
 	conf->files.gravity.k = "files.gravity";
 	conf->files.gravity.h = "The location of Pi-hole's gravity database";
