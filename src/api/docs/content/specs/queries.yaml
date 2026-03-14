@@ -25,8 +25,9 @@ components:
 
           By default, the returned queries always start at the most recent query.
           This can be changed by supplying the parameter `cursor`.
-          Each result of this API callback contains a `cursor` pointing the beginning of the next `length` queries chunk.
-          This provides a very fast and lightweight server-side pagination implementation.
+
+          Each response contains a `cursor` value that can be reused to keep results stable while paging.
+          Use `start` + `length` to page through results under the same cursor.
 
           If wildcards are supported for a parameter, you may specify `*` at any position in the parameter to match any number of characters.
         parameters:
